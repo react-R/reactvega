@@ -15,3 +15,4 @@ Imports:
     htmltools,
     shiny,
     reactR
+RoxygenNote: 7.0.2
