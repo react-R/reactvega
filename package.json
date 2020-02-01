@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react-vega": "^7.1.1",
     "vega": "^5.9.1",
     "vega-lite": "^4.1.1"
