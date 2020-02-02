@@ -6,6 +6,15 @@ spec <- jsonlite::fromJSON(
   simplifyVector = FALSE
 )
 
+# library(vlbuildr)
+# spec <- vl_chart() %>%
+#    vl_add_data(values = mtcars) %>%
+#    vl_mark_point() %>%
+#    vl_encode_x("wt") %>%
+#    vl_encode_y("mpg") %>%
+#   format() %>%
+#   jsonlite::fromJSON(simplifyVector = FALSE)
+
 dat <- data.frame(
   category = letters[1:15],
   amount = runif(15, 0, 40),
@@ -30,6 +39,10 @@ server <- function(input, output, session) {
         data = jsonlite::toJSON(list(table = dat), dataframe="rows", auto_unbox = TRUE)
       )
     )
+  })
+
+  output$textOutput <- renderText({
+    jsonlite::toJSON(input$vegaInput_tooltip, auto_unbox=TRUE)
   })
 }
 

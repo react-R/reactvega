@@ -1,7 +1,6 @@
 {
   "private": true,
   "dependencies": {
-    "@babel/runtime": "^7.8.4",
     "prop-types": "^15.7.2",
     "react-vega": "^7.1.1",
     "vega": "^5.9.1",
@@ -12,6 +11,7 @@
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.8.4",
     "babel-loader": "^8.0.4",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"

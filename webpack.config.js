@@ -26,7 +26,8 @@ module.exports = {
     externals: {
         'react': 'window.React',
         'react-dom': 'window.ReactDOM',
-        'reactR': 'window.reactR'
+        'reactR': 'window.reactR',
+        'Shiny': 'window.Shiny'
     },
     stats: {
         colors: true
