@@ -7,7 +7,7 @@
 #' @importFrom htmltools htmlDependency tags
 #'
 #' @export
-reactvegaInput <- function(inputId, default = "") {
+reactvegaInput <- function(inputId, spec = NULL, data = NULL, default = "", configuration = list()) {
   reactR::createReactShinyInput(
     inputId,
     "reactvega",
@@ -19,8 +19,8 @@ reactvegaInput <- function(inputId, default = "") {
       script = "reactvega.js"
     ),
     default,
-    list(),
-    htmltools::tags$span
+    configuration = configuration,
+    htmltools::tags$div
   )
 }
 
@@ -29,8 +29,9 @@ reactvegaInput <- function(inputId, default = "") {
 #' <Add Description>
 #'
 #' @export
-updateReactvegaInput <- function(session, inputId, value, configuration = NULL) {
-  message <- list(value = value)
+updateReactvegaInput <- function(session, inputId, value = NULL, configuration = NULL) {
+  message <- list()
+  if (!is.null(value)) message$value <- value
   if (!is.null(configuration)) message$configuration <- configuration
   session$sendInputMessage(inputId, message);
 }

@@ -4,7 +4,7 @@
 \alias{reactvegaInput}
 \title{<Add Title>}
 \usage{
-reactvegaInput(inputId, default = "")
+reactvegaInput(inputId, spec = NULL, data = NULL, default = "")
 }
 \description{
 <Add Description>

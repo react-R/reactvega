@@ -4,7 +4,7 @@
 \alias{updateReactvegaInput}
 \title{<Add Title>}
 \usage{
-updateReactvegaInput(session, inputId, value, configuration = NULL)
+updateReactvegaInput(session, inputId, value = NULL, configuration = NULL)
 }
 \description{
 <Add Description>
