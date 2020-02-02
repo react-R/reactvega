@@ -22,7 +22,7 @@ dat <- data.frame(
 )
 
 ui <- fluidPage(
-  titlePanel("reactR Input Example"),
+  titlePanel("react-vega Input Example"),
   actionButton("updateBtn", label = "Update Data"),
   reactvegaInput("vegaInput", configuration = list(spec = spec, data = list())),
   textOutput("textOutput")
